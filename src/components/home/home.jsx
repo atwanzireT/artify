@@ -1,10 +1,16 @@
 import React from "react";
-import Header from "../common/header";
+import Navigation from "../common/navigation";
+import Header from "./header";
 
 export default function Home(){
     return(
         <div>
-            <Header/>
+            <div>
+                <Navigation/>
+            </div>
+            <div>
+                <Header/>
+            </div>
         </div>
     )
 }

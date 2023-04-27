@@ -1,0 +1,7 @@
+nav li{
+  list-style: none;
+}
+
+nav .link{
+  display: inline-block;
+}
