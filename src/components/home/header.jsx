@@ -11,7 +11,7 @@ export default function Header() {
     const options = ["Inspiration", "Dream"]
     return (
         <>
-            <div className="mt-10">
+            <div className="mt-8">
                 <h1 className="text-gray-800 text-center m-auto"
                     style={{ fontSize: "50px", fontWeight: "300" }}>Get Your Next</h1>
                 <h1 className="text-red-900 text-center" style={{ fontSize: "50px", fontWeight: "300" }}>Inspiration & Dream</h1>
@@ -21,6 +21,9 @@ export default function Header() {
                 <div ><img className="rounded-3xl mt-4 h-5/6" src={img2} alt="" /></div>
                 <div ><img className="rounded-3xl mt-4 h-5/6" src={img3} alt="" /></div>
                 <div ><img className="rounded-3xl h-5/6" style={{marginTop:"-30px"}} src={img4} alt="" /></div>
+            </div>
+            <div className="text-center" style={{marginTop:"-20px"}}>
+                <a href="#" className="text-white bg-red-900 p-2 rounded-md">How it Works</a>
             </div>
         </>
     )
