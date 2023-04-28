@@ -5,3 +5,20 @@ nav li{
 nav .link{
   display: inline-block;
 }
+
+.artify-img:hover{
+  object-fit:  contain;
+
+}
+
+.img-btns{
+  margin-top: -60px;
+}
+
+.img-btns:hover{
+    display: block;
+}
+
+.icon{
+
+}
