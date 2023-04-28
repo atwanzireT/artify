@@ -14,7 +14,7 @@ export default function How_it_Works() {
                         {/* <input type="text" placeholder="search" /> */}
                         <div className="m-auto">
                             <div style={{ marginTop: "20px" }}>
-                                <div className="grid grid-cols-3 bg-white rounded-2xl m-auto w-2/6">
+                                <div className="grid grid-cols-3 bg-white border border-red-900 border-2 rounded-2xl m-auto w-2/6">
                                     <div><MagnifyingGlassIcon className="h-16 w-16 my-2 ms-1 text-red-900 col-span-1" /> </div>
                                     <div className="col-span-2 my-2 me-1 text-3xl font-bold">african Art</div>
                                 </div>
@@ -28,11 +28,11 @@ export default function How_it_Works() {
                                 <div><img className="rounded-3xl mx-2 my-2  border-red-300 border-solid border-2" style={{ marginLeft: "-100px"}} src={img3} alt="" /></div>
                             </div>
                         </div>
-                        <div className="m-auto mx-2">
-                            <h1 className="text-gray-800 text-center font-extrabold m-auto"
-                                style={{ fontSize: "45px", fontWeight: "300" }}>Easily Search For Your Insterest.
+                        <div className="m-auto text-center">
+                            <h1 className="text-red-800 text-center font-extrabold m-auto"
+                                style={{ fontSize: "45px", fontWeight: "500" }}>Easily Search For Your Insterest.
                             </h1>
-                            <h5 className="text-gray-950 text-center font-bold m-auto" style={{ fontSize: "25px", fontWeight: "300" }}>
+                            <h5 className="text-red-950 text-center font-bold m-auto" style={{ fontSize: "25px", fontWeight: "300" }}>
                                 Where do you need as your next Experience? Think of Something you are into.
                                 It can be a Meal, Journey, Fashion, Art or so much more
                             </h5>

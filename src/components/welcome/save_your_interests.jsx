@@ -11,12 +11,12 @@ export default function Save_your_insterest() {
         <>
             <div className="bg-blue-200" style={{ height: "700px" }}>
                 <div className="grid grid-cols-2 gap-2 m-auto items-center">
-                    <div className="items-center h-screen flex">
+                    <div className="items-center m-auto h-screen flex">
                         <div>
-                            <h1 className="text-gray-800 text-center font-extrabold m-auto"
-                                style={{ fontSize: "45px", fontWeight: "300" }}>Easily Save Your Insterest.
+                            <h1 className="text-blue-800 text-center font-extrabold m-auto"
+                                style={{ fontSize: "45px", fontWeight: "500" }}>Easily Save Your Insterest.
                             </h1>
-                            <h5 className="text-gray-950 text-center font-bold m-auto" style={{ fontSize: "25px", fontWeight: "300" }}>
+                            <h5 className="text-blue-950 text-center font-bold m-auto" style={{ fontSize: "25px", fontWeight: "300" }}>
                                 Collect your Favourites so as <br /> You can easily get back to them anytime.
                             </h5>
                         </div>
