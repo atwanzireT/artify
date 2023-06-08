@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { BellIcon, ChatBubbleLeftIcon } from "@heroicons/react/24/solid"
 import img from "../images/african_girl.jpg"
+import { Store } from "../../context/store";
+import { useNavigate } from "react-router-dom";
+
 
 export default function Topnav() {
+    const navigate = useNavigate()
+    const {dispatch} = useState(Store)
+    const logout = () => {
+        dispatch({
+            type:"LOGOUTUSER"
+        })
+        navigate("/login")
+    }
     return (
        <div className="sticky bg-white top-0">
          <div className="w-11/12 mx-auto my-2">
@@ -13,6 +24,7 @@ export default function Topnav() {
                     <span className=" float-right inline-flex">
                         <a href="#"><BellIcon className="w-12 h-12 text-red-900  my-3 py-2 mx-1" /></a>
                         <a href="#"><ChatBubbleLeftIcon className="w-12 h-12 text-red-900 mx-1  my-3 py-2" /></a>
+                        <button type="button" onSubmit={logout}>Logout</button>
                         <a href="#">
                             <img className="rounded-full h-10 w-10 my-3 mx-1 border border-1 border-red-900 border-opacity-50" src={img} alt="" />
                         </a>

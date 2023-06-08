@@ -1,23 +1,35 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import axios from "../lib/axios"
-import { useNavigate } from "react-router-dom";
+import { Store } from "../../context/store";
+import { redirect, useNavigate } from "react-router-dom";
 
 
-export default function SignUp() {
+export default function Login() {
     const navigate = useNavigate()
+    const {dispatch, state} = useContext(Store)
+    const {authtokens} = state
+    useEffect(()=>{
+        if (authtokens) {
+            navigate("/home")
+        }
+    })
     const handleSubmit = async(e) => {
         e.preventDefault()
+        console.log(e.target.email.value)
         const formdata = {
             "email" : e.target.email.value,
-            "user_name": e.target.user_name.value,
             "password": e.target.password.value,
         }
 
         try {
-            const response = await axios.post("api/user/new_user/", formdata)
+            const response = await axios.post("api/user/token/", formdata)
             if (response.status === 200){
-                navigate("/login")
-                console.log(response);
+                // console.log(response);
+                dispatch({
+                    type:"USERLOGIN",
+                    payload:response.data
+                })
+                navigate("/home")
             }
         } catch (error) {
             console.log(error)
@@ -50,14 +62,6 @@ export default function SignUp() {
                                             </div>
                                             <div>
                                                 <input id="emailfield" name="email" placeholder="Email" type="text" className="border border-yellow-900 border-opacity-50 border-solid rounded-2xl p-2 w-full" />
-                                            </div>
-                                        </div>
-                                        <div className="my-2">
-                                            <div>
-                                                <label className="text-yellow-800 text-center text-opacity-70 italic" htmlFor="userfield">Username</label>
-                                            </div>
-                                            <div>
-                                                <input id="userfield" name="user_name" placeholder="Username" type="text" className="border border-yellow-900 border-opacity-50 border-solid rounded-2xl p-2 w-full" />
                                             </div>
                                         </div>
                                         <div className="my-2">

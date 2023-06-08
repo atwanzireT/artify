@@ -9,7 +9,7 @@ export default function Navigation() {
                     <a href="#"><li className="link m-3 p-1">About</li></a>
                     <a href="#"><li className="link m-3 p-1">Business</li></a>
                     <a href="#"><li className="link m-3 p-1">Blog</li></a>
-                    <a href="#"><li className="link m-3 p-2 bg-red-900 rounded-xl text-white float-right">Log in</li></a>
+                    <a href="#signup" ><li className="link m-3 p-2 bg-red-900 rounded-xl text-white float-right">Log in</li></a>
                 </div>
             </nav>
         </div>
