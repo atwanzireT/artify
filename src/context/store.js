@@ -18,6 +18,8 @@ const reducer = (state, action) => {
         }
         case "LOGOUTUSER":{
             Cookies.remove("authtokens")
+            console.log("authtokens_clear")
+            return {...state}
         }
         default:
             return state
